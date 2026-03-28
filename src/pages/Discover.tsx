@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { X, Heart } from "lucide-react"
 import { AnimatePresence } from "motion/react"
-import { toast } from "sonner"
 import SwipeCard from "@/components/SwipeCard"
 import { useDiscover } from "@/hooks/useData"
 import { swipe } from "@/lib/api"
@@ -29,9 +28,6 @@ export default function Discover() {
 
   const topUser = users[0]
   const nextUser = users[1]
-
-  // suppress unused warning for toast
-  void toast
 
   return (
     <div className="flex flex-col h-full">

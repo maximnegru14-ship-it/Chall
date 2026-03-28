@@ -1,6 +1,6 @@
 import { supabase } from "./supabase"
 
-const API_BASE = `https://utaksmztzpmmmeguxecm.supabase.co/functions/v1/make-server-4ac76e94`
+const API_BASE = `${import.meta.env.VITE_SUPABASE_URL as string}/functions/v1/make-server-4ac76e94`
 
 async function request<T = unknown>(path: string, options?: RequestInit): Promise<T> {
   const {
